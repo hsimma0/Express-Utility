@@ -9,11 +9,11 @@ const app = express();
 //Greetings
 app.get("/greetings/", (req, res) => {
     console.log('Got A Request');
-    res.send('Hello')
+    res.send('Hello its yo Herv')
 })
 
-app.get('/greetings/:name', (req,res) => {
-    req.send('Hello ${req.params.name}')
+app.get('/greetings/:name',(req,res) => {
+    req.send(`Hello ${req.params.name}`)
 });
 
 

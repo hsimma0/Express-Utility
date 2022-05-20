@@ -1,59 +1,57 @@
-//Express Route
-const { request } = require('express');
-const express = require('express');
-const req = require('express/lib/request');
-const res = require('express/lib/response');
-const app = express();
+// //EXPRESS ROUTE
+// const express = require('express');
+// const app = express();
+// const port = 3010;
 
 
-//Greetings
-app.get("/greetings/", (req, res) => {
-    console.log('Got A Request');
-    res.send('Hello its yo Herv')
-})
+// // //GREETINGS
+// // app.get("/", (req, res) => {
+// //     console.log("Got A Request");
+// //     res.send('Hello its yo Herv')
+// // })
+// // app.get("/greeting/:name", (req, res)=> {
+// //     console.log(req.params)
+// //     res.send("Hello, whats up" + "  " + req.params.name)
+// // });
 
-app.get('/greetings/:name',(req,res) => {
-    req.send(`Hello ${req.params.name}`)
-});
+// //TIP CALCULATOR
+// // app.get("/tip/:total/:tipPercentage", (req,res) =>{
+// //     let tip = (req.params.tipPercentage / 100) * req.params.total;
+// //     res.send(`${tip}`);
+// // });
 
+// //MAGIC 8 BALL
+//     const randomAns =  [
+//         "It is certain",
+//         "It is decidedly so",
+//         "Without a doubt",
+//         "Yes definitely",
+//         "You may rely on it",
+//         "As I see it yes",
+//         "Most likely",
+//         "Outlook good",
+//         "Yes",
+//         "Signs point to yes",
+//         "Reply hazy try again",
+//         "Ask again later",
+//         "Better not tell you now",
+//         "Cannot predict now",
+//         "Concentrate and ask again",
+//         "Don't count on it",
+//         "My reply is no",
+//         "My sources say no",
+//         "Outlook not so good",
+//         "Very doubtful",
+//       ];
 
-//Tip Calculator
-app.get("/tip/:total/:tipPercentage", (req,res) => {
-    let tip = (req.params.tipPercentage / 100) * request.params.name;
-});
+//       app.get("/magic/:anything", (req,res) => {
+//           res.send(`
+//           <h1>${req.params.anthing}</h1>
+//           ${randomAns[Math.floor(Math.random() * randomAns.length)]}
+//           `)
+//     });
 
-
-//Magic 8 Ball
-app.get("/magic/:anything", (req, res) =>{
-    const array =  [
-        "It is certain",
-        "It is decidedly so",
-        "Without a doubt",
-        "Yes definitely",
-        "You may rely on it",
-        "As I see it yes",
-        "Most likely",
-        "Outlook good",
-        "Yes",
-        "Signs point to yes",
-        "Reply hazy try again",
-        "Ask again later",
-        "Better not tell you now",
-        "Cannot predict now",
-        "Concentrate and ask again",
-        "Don't count on it",
-        "My reply is no",
-        "My sources say no",
-        "Outlook not so good",
-        "Very doubtful",
-      ];
-
-    const magic = array[Math.floor(Math.random() * answers.length)];
-    res.send(`${request.params.anything} <h1> ${array[x]}</h1>`);
-});
-
-
-// IF APP IS LISTENING 
-app.listen(3001, () => {
-    console.log("Express de escuchar por request con browswer")
-});
+// // IF APP IS LISTENING 
+// app.listen(port, () => {
+//     console.log("Express de escuchar por request con browswer")
+// });
